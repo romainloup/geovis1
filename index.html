@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Activités sportives en Suisse Centrale</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+	  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- trajets et lignes -->
+    <script src="velo1.js"></script>
+    <script src="lacSarnenSprint.js"></script>
+    <script src="GlaubenbergSprint.js"></script>
+    <script src="grossescheidegg.js"></script>
+    <!-- <script src="suisse.js"></script> -->
+  </head>
+
+  <body>
+    <h1>Activités sportives en Suisse Centrale</h1>
+    <div id="coordonnees">Déplacez la souris sur la carte</div>
+    <div class="main">
+      <div id="map" class="carte-interactive"></div>
+      
+      <div class="sidebar">
+
+        <p class="explication">Cette carte interactive vous propose des itinéraires à vélo, des marches ou des visites selon vos envies, principalement depuis la ville de Sarnen.</br>Un choix de tours à vélo, ainsi que de marches pour une activité sportive intense ou des visites de villes de la Suisse centrale sont proposées pour une découverte différente de cette région.</p>
+
+<!--         <div class="recherche">
+          <select>
+            <option value="">-- Sélectionner votre bâtiment --</option>
+            <option value="SUS">Géopolis</option>
+            <option value="ANT">Anthropole</option>
+            <option value="MAX">Amphimax</option>
+            <option value="POL">Amphipole</option>
+          </select>
+        </div> -->
+        <h3>Quel type d'activité ?</h3>
+        <div class="listeCols" id="listeActi">
+          <!-- <label>xxx</label></br> -->
+          <input type="checkbox" name="velo" value=1 checked>Tours à vélo</br>
+            <select class="choix">
+              <option value="">-- Tous --</option>
+              <option value="SUS">Susten</option>
+              <option value="BRU">Brünig</option>
+              <option value="FUR">Furka</option>
+              <option value="GRI">Grimsel</option>
+              <option value="GSC">Grosse Scheidegg</option>
+              <option value="GBB">Glaubenberg</option>
+            </select>&nbsp;&nbsp;<i>Sélectionnez un col pour le centrer</i></br>
+        </div>
+        <div class="listeMarches" id="listeActi">
+          <input type="checkbox" name="marche" value=1 checked>Marches à pied</br>
+            <select class="choix">
+              <option value="">-- Toutes --</option>
+              <option value="PIL">Pilatus</option>
+              <option value="CCH">Centre géographique suisse</option>
+            </select>&nbsp;&nbsp;<i>Sélectionnez une destination pour la centrer</i></br>
+        </div>
+        <div class="listeVilles" id="listeActi">
+          <input type="checkbox" name="ville" value=1 checked>Villes à visiter</br>
+            <select class="choix">
+              <option value="">-- Toutes --</option>
+              <option value="SAR">Sarnen</option>
+              <option value="LUC">Lucerne</option>
+              <option value="INT">Interlaken</option>
+              <option value="THU">Thoune</option>
+            </select>&nbsp;&nbsp;<i>Sélectionnez une ville pour la centrer</i>
+        </div>
+
+        <div class="infobox"><i>Cliquez sur les différents marqueurs et sur les trajets pour plus d'informations</i>
+<!--           <table cellpadding="3">
+            <tr>
+              <td><b>Itinéraire :</b></td>
+              <td>facile etc</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;"><b>Informations :</b></td>
+            </tr>
+          </table> -->
+          
+        </div>
+        <div id="webcam-box"></div>
+
+<!-- tableau a definir -->
+<!--         <div id="infobox">
+          <table cellpadding="3">
+            <tr>
+              <td><b>Bâtiment:</b></td>
+              <td>Géopolis</td>
+            </tr>
+            <tr>
+              <td><b>Facultés:</b></td>
+              <td>
+                <a href="http://unil.ch/gse">GSE</a>,
+                <a href="http://unil.ch/ssp">SSP</a>
+              </td>
+            </tr>
+          </table>
+        </div> -->
+        
+        <!-- case en dessous -->
+        <!-- <iframe src="http://www.lsaviron.ch" width="450" height="300" name="myFrame" id="myFrame"> </iframe> -->
+
+        <div class="copyright">
+          2017 © Romain Loup
+        </div>
+      </div>
+    </div>
+    <!-- Reference au javascript -->
+    <script src="index.js"></script>
+  </body>
+</html>
